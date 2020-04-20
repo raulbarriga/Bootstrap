@@ -1,0 +1,49 @@
+Task 1
+
+
+img-fluid to fit the viewport size without creating a horizontal scroll (make them responsive)
+
+to have the image & text next to each other: 1) first remove the p tags around the text, 2) add a media class div that wraps around both the media/image and the text, 3) then add a media-body class div that wraps around just the text, keeping the img tag on top of it in the editor,
+
+to have image appear on the right use float-right on the img
+
+Add the Bootstrap class to the image to style it like an image thumbnail (creating a 1px border & rounded corners)
+	.img-thumbnail
+
+add a margin of the same size as for the other two thumbnail images on this page, but apply the margin to the left side of the image rather than the right
+	ml-3 class to the img tag
+
+img tags are inline by default
+
+
+
+Task 2
+
+
+Add a new row-content div:
+
+<div class="row row-content align-items-center">
+	<div class="col-sm-6 mx-auto">
+		<div class="card">
+			<h3 class="card-header bg-info text-white"></h3>	
+			<div class="card-body">
+				<form>
+					<div class="row"> form group class also?
+						<label></label>
+						<select class="form-control">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+						</select>
+					</div>
+					<div class="row">
+						
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
