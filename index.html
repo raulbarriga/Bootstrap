@@ -278,6 +278,7 @@
             <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
             <div class="card-body">
               <form id="reserveForm">
+                
                 <div class="row form-group">
                   <label for="numCampers" class="col-sm-6 col-form-label"
                     >Number of Campers</label
@@ -288,7 +289,7 @@
                       id="numCampers"
                       class="form-control"
                     >
-                      <option value="select">Select...</option>
+                      <option selected>Select...</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -300,7 +301,7 @@
                 </div>
                 <div class="row form-group">
                   <label for="date" class="col-sm-6 col-form-label">Date</label>
-                  <div class="col">
+                  <div class="col-sm-6">
                     <input
                       type="date"
                       name="date"
@@ -310,7 +311,7 @@
                     />
                   </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                   <div class="col">
                     <button type="submit" class="btn btn-primary">
                       Reserve
