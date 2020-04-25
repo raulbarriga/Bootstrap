@@ -41,19 +41,94 @@
           </div>
           <div class="col-md-4 col-xl-2 mt-4">
             <a
-              href="#reserveForm"
+              data-toggle="modal"
               role="button"
               class="btn btn-info btn-lg"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              data-html="true"
-              title="Or call us at <br /><strong>1-206-555-1234</strong>"
+              data-target="#reserveModal"
               >Reserve Campsite</a
             >
           </div>
         </div>
       </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info text-white">
+            <h3 class="modal-title ">Reserve a Campsite</h3>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                  
+                  <div class="row form-group">
+                    <label for="numCampers" class="col-sm-6 col-form-label"
+                      >Number of Campers</label
+                    >
+                    <div class="col-sm-6">
+                      <select
+                        name="numCampers"
+                        id="numCampers"
+                        class="form-control"
+                      >
+                        <option selected>Select...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Date -->
+                  <div class="row form-group">
+                    <label for="date" class="col-sm-6 col-form-label">Date</label>
+                    <div class="col-sm-6">
+                      <input
+                        type="date"
+                        name="date"
+                        id="date"
+                        class="form-control"
+                        placeholder="date"
+                      />
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <label class="col-sm-6 col-form-label">Campsite Type</label>
+                    <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                      <button id="siteTent" type="radio" class="btn btn-success" name="siteType" value="tent">
+                        Tent
+                      </button>
+                      <button id="siteRV" type="radio" class="btn btn-primary" name="siteType" value="RV">
+                        RV
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="submit" class="btn btn-primary">
+                        Reserve
+                      </button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+    
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
       <div class="container">
@@ -99,6 +174,7 @@
         </div>
       </div>
     </nav>
+    <!-- The log in modal -->
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -162,6 +238,7 @@
 
     <div class="container">
 
+      <!-- The Carousel -->
       <div class="row row-content">
         <div class="col-md-8 mx-auto">
           <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -272,7 +349,8 @@
         </div>
       </div>
 
-      <div class="row row-content align-items-center">
+      <!-- The Reservation form is here -->
+      <!-- <div class="row row-content align-items-center">
         <div class="col-sm-6 mx-auto">
           <div class="card">
             <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
@@ -322,7 +400,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <footer class="site-footer">
@@ -381,9 +459,6 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
     </script>
   </body>
 </html>
