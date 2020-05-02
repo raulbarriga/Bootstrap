@@ -1,3 +1,4 @@
+// For the Carousel
 $(function(){
     $(".carousel").carousel( { interval: 2000 } );
     $("#carouselButton").click(function(){
@@ -10,5 +11,15 @@ $(function(){
         $("#carouselButton").children("i").removeClass("fa-play");
         $("#carouselButton").children("i").addClass("fa-pause");
       }
+    });
+  });
+
+  // For the Reserve and Login Buttons
+  $(function(){
+    $("#reserveButton").click(function(){
+      $("#reserveModal").modal('show');
+    });
+    $("#loginButton").click(function(){
+      $("#loginModal").modal('show');
     });
   });
